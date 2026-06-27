@@ -1,3 +1,5 @@
+#The creator of this menu: https://github.com/LifeOfATitan/orbit
+
 position = "bottom-right"
 
 margin_top = 18
@@ -5,6 +7,7 @@ margin_right = 18
 margin_bottom = 0
 margin_left = 0
 
+#add window animation. Refer orbit github repo for options.
 window_transition = "swingdown"
 window_transition_duration = 180
 

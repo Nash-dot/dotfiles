@@ -29,6 +29,7 @@ window#waybar {
   transition-duration: 120ms;
 }
 
+/* hover many not work on all versions.*/
 #battery:hover,
 #network:hover,
 #bluetooth:hover,

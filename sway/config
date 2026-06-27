@@ -1,26 +1,33 @@
-# Default config for sway
+# You can copy default config for sway from their site for more options on customization
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
 
+#after every change in config file be sure to reload sway either in terminal by ....swaymsg reload... or shortcut key logokey+shift+c 
+
 ### Variables
 #
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 set $term kitty
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $application_launcher pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
 set $file_explorer GTK_THEME=diinki-retro-dark nemo
 
+# Add your preferred browser
 set $browser brave-browser
 
 #include /etc/sway/config-vars.d/*
@@ -28,7 +35,7 @@ set $browser brave-browser
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/nash/Pictures/Wallpapers/kitty_bg.png fill
+output * bg ~/Pictures/Wallpapers/desktop_background.png fill
 # Example configuration:
 #
 output eDP-1 resolution 1920x1080@60.00Hz scale 1 position 0,0
@@ -109,7 +116,7 @@ input "1267:12423:ELAN1300:00_04F3:3087_Touchpad" {
     # Start Broswser
     bindsym $mod+b exec $browser
     
-    # Toggle Waybar into Screen
+    # Toggle Waybar into Screen you can skip this step if you want your waybar on screen all the time.
     bindsym $mod+z exec pkill -SIGUSR1 waybar
     
     # Drag floating windows by holding down $mod and left mouse button.

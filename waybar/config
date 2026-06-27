@@ -1,4 +1,7 @@
 {
+  "_comment": "The waybar is kept simple. Network is connected to Orbit. For more changes refer waybar config.",
+  
+  
   "layer": "top",
   "exclusive": true,
   "gtk-layer-shell": true,

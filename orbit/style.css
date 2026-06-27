@@ -1,3 +1,6 @@
+/*The creator of the Menu: https://github.com/LifeOfATitan/orbit 
+The original panel had accents of Purple which did not atch my rice. So i altered it accordingly */
+
 /* ===== Main Panel ===== */
 
 .orbit-panel {
@@ -217,22 +220,6 @@ scrollbar slider:hover {
     color: #B8847A;
 }
 
-
-/* ===== Power Toggle ===== */
-
-window switch.orbit-toggle-switch,
-window switch.orbit-toggle-switch:not(:backdrop),
-window switch.orbit-toggle-switch:checked,
-window switch.orbit-toggle-switch:checked:hover,
-window switch.orbit-toggle-switch:checked:not(:backdrop),
-window switch.orbit-toggle-switch trough,
-window switch.orbit-toggle-switch:checked trough {
-
-    background: #B8847A !important;
-    background-color: #B8847A !important;
-
-    border-color: #B8847A !important;
-}
 
 window switch.orbit-toggle-switch slider {
 
