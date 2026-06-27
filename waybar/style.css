@@ -1,0 +1,107 @@
+* {
+  font-family: "Maple Mono NF";
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 0px;
+}
+
+window#waybar {
+  background-color: #141216;
+  border-radius: 14px;
+  padding: 8px;
+  border-style: none;
+}
+
+#battery,
+#network,
+#bluetooth,
+#clock,
+#tray,
+#workspaces,
+#pulseaudio {
+  background-color: #2b2524;
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #d9c8b5;
+  border: 1px solid #5d4944;
+  transition-duration: 120ms;
+}
+
+#battery:hover,
+#network:hover,
+#bluetooth:hover,
+#clock:hover,
+#pulseaudio:hover,
+#tray:hover {
+  background-color: #342d2c;
+  color: #D89BA5;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#tray menu {
+  background-color: #141216;
+  color: #d9c8b5;
+  padding: 4px;
+  border: 1px solid #5d4944;
+}
+
+#tray menu menuitem {
+  background-color: #2b2524;
+  margin: 3px;
+  color: #d9c8b5;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #2b2524;
+}
+
+#tray menu menuitem:hover {
+  background-color: #342d2c;
+  color: #d89ba5;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #bda998;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #8A9A72;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: #8A9A72;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: #d8a56b;
+}
+
+#battery.warning {
+  color: #d8a56b;
+}
+
+#battery.critical,
+#battery.urgent {
+  color: #b75a5a;
+}
+
+tooltip {
+  background-color: #2b2524;
+  color: #d9c8b5;
+  border: 1px solid #5d4944;
+  border-radius: 8px;
+}

@@ -1,0 +1,12 @@
+position = "bottom-right"
+
+margin_top = 18
+margin_right = 18
+margin_bottom = 0
+margin_left = 0
+
+window_transition = "swingdown"
+window_transition_duration = 180
+
+stack_transition = "slidehorizontal"
+stack_transition_duration = 180

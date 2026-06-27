@@ -1,0 +1,271 @@
+/* ===== Main Panel ===== */
+
+.orbit-panel {
+    background: rgba(20, 18, 22, 0.94);
+    border: 1px solid #5A4C48;
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ===== Cards ===== */
+
+.orbit-network-row,
+.orbit-device-row {
+    background: #252122;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    margin: 6px;
+    padding: 10px;
+    transition: 180ms;
+}
+
+.orbit-network-row:hover,
+.orbit-device-row:hover {
+    background: #2F2928;
+    border-color: #C58F8F;
+}
+
+/* ===== Buttons ===== */
+
+button,
+.orbit-button {
+
+    background: #252122;
+
+    color: #D9C8B5;
+
+    border: 1px solid #5A4C48;
+
+    border-radius: 10px;
+
+    transition: 150ms;
+}
+
+button:hover,
+.orbit-button:hover {
+
+    background: #322B2A;
+
+    color: #C58F8F;
+}
+
+/* ===== Tabs ===== */
+
+.orbit-tab {
+
+    color: #A99686;
+
+    border-radius: 10px;
+
+    transition: 150ms;
+}
+
+.orbit-tab:hover {
+
+    color: #C58F8F;
+}
+
+.orbit-tab:selected {
+
+    background: rgba(197,143,143,.15);
+
+    color: #C58F8F;
+}
+
+/* ===== Search ===== */
+
+entry {
+
+    background: #252122;
+
+    color: #D9C8B5;
+
+    border: 1px solid #5A4C48;
+
+    border-radius: 10px;
+}
+
+entry:focus {
+
+    border-color: #C58F8F;
+}
+
+/* ===== Labels ===== */
+
+label {
+
+    color: #D9C8B5;
+}
+
+/* ===== Switches ===== */
+
+switch:checked {
+
+    background: #7A8F62;
+}
+
+switch slider {
+
+    background: #D9C8B5;
+}
+
+/* ===== Progress ===== */
+
+progress {
+
+    background: #252122;
+}
+
+progress progress {
+
+    background: #C58F8F;
+}
+
+/* ===== Scrollbars ===== */
+
+scrollbar slider {
+
+    background: #5A4C48;
+
+    border-radius: 99px;
+}
+
+scrollbar slider:hover {
+
+    background: #C58F8F;
+}
+
+
+
+/* ===== Header ===== */
+
+.orbit-header {
+    background: #1C1A1D;
+    border-bottom: 1px solid #5A4C48;
+}
+
+/* ===== Tab Bar ===== */
+
+.orbit-tab-bar {
+    background: #1F1C1F;
+    border-radius: 999px;
+    padding: 4px;
+}
+
+.orbit-tab.active {
+    background: #B8847A;
+    color: #141216;
+}
+
+/* ===== Connected Cards ===== */
+
+.orbit-network-row.connected,
+.orbit-device-row.connected,
+.orbit-saved-network-row.active {
+
+    background: rgba(112,128,95,0.18);
+
+    border: 1px solid #70805F;
+}
+
+/* ===== Search Container ===== */
+
+.orbit-search-container {
+
+    background: #1F1C1F;
+
+    border: 1px solid #5A4C48;
+}
+
+.orbit-search-entry {
+
+    color: #D8CAB8;
+}
+
+/* ===== Footer ===== */
+
+.orbit-footer {
+
+    background: #1C1A1D;
+
+    border-top: 1px solid #5A4C48;
+}
+
+/* ===== Status Text ===== */
+
+.orbit-status {
+
+    color: #B7A998;
+
+    opacity: .8;
+}
+
+/* ===== Toggle ===== */
+
+.orbit-toggle-switch:checked {
+
+    background: #70805F !important;
+
+    border-color: #70805F !important;
+}
+
+/* ===== Section Header ===== */
+
+.orbit-section-header {
+
+    color: #B8847A;
+}
+
+
+/* ===== Power Toggle ===== */
+
+window switch.orbit-toggle-switch,
+window switch.orbit-toggle-switch:not(:backdrop),
+window switch.orbit-toggle-switch:checked,
+window switch.orbit-toggle-switch:checked:hover,
+window switch.orbit-toggle-switch:checked:not(:backdrop),
+window switch.orbit-toggle-switch trough,
+window switch.orbit-toggle-switch:checked trough {
+
+    background: #B8847A !important;
+    background-color: #B8847A !important;
+
+    border-color: #B8847A !important;
+}
+
+window switch.orbit-toggle-switch slider {
+
+    background: #141216 !important;
+}
+
+/* ===== Orbit Logo ===== */
+
+.orbit-icon-accent,
+.orbit-logo-container,
+image {
+
+    color: #B8847A !important;
+
+    -gtk-icon-palette:
+        success #B8847A,
+        warning #B8847A,
+        error #B8847A;
+}
+
+/* Hide Orbit logo */
+
+.orbit-logo-container {
+
+    opacity: 0;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
