@@ -1,0 +1,51 @@
+# ==========================================
+# Mako Notification Theme
+# Matches: Sway • Waybar • Kitty • Orbit • Wofi
+# Author: Nashath Hasan
+# ==========================================
+
+
+# ---------- Font ----------
+font=Maple Mono NF 11
+
+# ---------- Layout ----------
+default-timeout=5000
+max-visible=4
+
+margin=18,18,18,18
+padding=14
+
+width=360
+height=120
+
+border-size=2
+border-radius=14
+
+anchor=bottom-right
+layer=overlay
+
+# ---------- Normal ----------
+background-color=#141216EE
+text-color=#D9C8B5
+border-color=#C58F8F
+
+progress-color=over #7A8F62
+
+# ---------- Low Urgency ----------
+[urgency=low]
+background-color=#141216DD
+border-color=#5A4C48
+text-color=#BFAE9C
+
+# ---------- Normal Urgency ----------
+[urgency=normal]
+background-color=#141216EE
+border-color=#C58F8F
+text-color=#D9C8B5
+
+# ---------- High Urgency ----------
+[urgency=critical]
+background-color=#141216
+border-color=#A95A52
+text-color=#F6E8D9
+default-timeout=0
