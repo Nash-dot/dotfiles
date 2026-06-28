@@ -1,33 +1,26 @@
-# You can copy default config for sway from their site for more options on customization
+# Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
 
-#after every change in config file be sure to reload sway either in terminal by ....swaymsg reload... or shortcut key logokey+shift+c 
-
 ### Variables
 #
-
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-
 # Your preferred terminal emulator
 set $term kitty
-
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $application_launcher pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
 set $file_explorer GTK_THEME=diinki-retro-dark nemo
 
-# Add your preferred browser
 set $browser brave-browser
 
 #include /etc/sway/config-vars.d/*
@@ -35,7 +28,7 @@ set $browser brave-browser
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/Wallpapers/desktop_background.png fill
+output * bg /home/nash/Pictures/Wallpapers/desktop_background.png fill
 # Example configuration:
 #
 output eDP-1 resolution 1920x1080@60.00Hz scale 1 position 0,0
@@ -47,6 +40,9 @@ output eDP-1 resolution 1920x1080@60.00Hz scale 1 position 0,0
 #enable auto-tiling
 exec_always autotiling
 
+#enable battery notification alerts from mako.(scripts in bin)
+exec ~/.local/bin/battery-monitor
+
 #exec_always swaymsg gaps outer all set 5
 exec_always swaymsg gaps inner all set 5
 
@@ -56,8 +52,14 @@ default_floating_border pixel 1px
 #set sway default font  
 font pango:Maple Mono NF 11
 
+# Notifications
+exec mako
+
+#Open orbit daemon on time of launch
 exec_always orbit daemon
 
+#Open mako daemon on time of launch
+exec_always mako daemon
 
 # The border colors:
 
@@ -74,12 +76,13 @@ client.placeholder      #8C6E61 #141216 #d9c8b5 #8C6E61 #8C6E61
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+#exec swayidle -w \
+#    timeout 300 'swaylock -c 141216' \
+#    timeout 600 'swaymsg "output * power off"' \
+#    resume 'swaymsg "output * power on"' \
+#    before-sleep 'swaylock -c 141216'
 #
-# This will lock your screen after 300 seconds of inactivity, then turn off
+# This will lock your screen after 400 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
@@ -106,6 +109,9 @@ input "1267:12423:ELAN1300:00_04F3:3087_Touchpad" {
 
     # Kill focused window
     bindsym $mod+q kill
+    
+    # Lock the screen
+    #bindsym $mod+shift+return exec swaylock -c 141216
 
     # Start your launcher
     bindsym $mod+a exec $application_launcher
@@ -116,7 +122,7 @@ input "1267:12423:ELAN1300:00_04F3:3087_Touchpad" {
     # Start Broswser
     bindsym $mod+b exec $browser
     
-    # Toggle Waybar into Screen you can skip this step if you want your waybar on screen all the time.
+    # Toggle Waybar into Screen
     bindsym $mod+z exec pkill -SIGUSR1 waybar
     
     # Drag floating windows by holding down $mod and left mouse button.
