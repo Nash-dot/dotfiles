@@ -49,6 +49,9 @@ exec_always swaymsg gaps inner all set 5
 default_border pixel 1px
 default_floating_border pixel 1px
 
+exec dbus-update-activation-environment --systemd --all
+exec dbus-update-activation-environment --systemd GDK_BACKEND=wayland
+
 #set sway default font  
 font pango:Maple Mono NF 11
 
@@ -124,6 +127,21 @@ input "1267:12423:ELAN1300:00_04F3:3087_Touchpad" {
     
     # Toggle Waybar into Screen
     bindsym $mod+z exec pkill -SIGUSR1 waybar
+    
+    # Function keys mapped 
+    bindsym F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym F2 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym F4 exec brightnessctl set 5%-
+    bindsym F5 exec brightnessctl set 5%+
+    bindsym F10 exec echo "camera toggle - placeholder"
+
+    # Lock screen (F9)
+    bindsym F9 exec swaylock
+    
+    # Screenshot keys
+    bindsym F11 exec grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png
+    bindsym F12 exec ~/.local/bin/toggle-recording.sh
     
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
