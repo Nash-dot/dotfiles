@@ -1,18 +1,22 @@
   {
-    "name": "statusbar",
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "exclusive": true,
     "gtk-layer-shell": true,
     "spacing": 0,
     "height": 0,
     "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-bottom": 1,
+    "margin-left": 5,
+    "margin-right": 15,
 
     "modules-left": [
-      "sway/workspaces"
+      "custom/applauncher",
+      "sway/workspaces",
+      "custom/mpris",
+      "custom/mpris-prev",
+      "custom/mpris-playpause",
+      "custom/mpris-next"
     ],
 
     "modules-center": [
@@ -24,9 +28,14 @@
       "network",
       "pulseaudio",
       "battery",
-      "custom/power",
-      "tray"
+      "custom/power"
     ],
+
+    "custom/applauncher": {
+      "format": "〇",
+      "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top -y 15",
+      "tooltip": false
+    },
 
     "sway/workspaces": {
       "disable-scroll": true,
@@ -35,11 +44,36 @@
     },
 
     "clock": {
-      "format": "{:%B %d %a %I:%M %p}",
-      "format-alt": "{:%d-%m-%Y}",
+      "format": "{:%I:%M %p}",
+      "format-alt": "{:%B %d %a}",
       "tooltip": false
     },
-
+    
+    "custom/mpris": {
+      "exec": "~/.config/waybar/scripts/mpris.sh",
+      "interval": 1,
+      "tooltip": false,
+      "escape": true
+    },
+    
+    "custom/mpris-prev": {
+      "format": "󰒮",
+      "on-click": "playerctl previous",
+      "tooltip": false
+    },
+    
+    "custom/mpris-playpause": {
+      "format": "󰏤",
+      "on-click": "playerctl play-pause",
+      "tooltip": false
+    },
+    
+    "custom/mpris-next": {
+      "format": "󰒭",
+      "on-click": "playerctl next",
+      "tooltip": false
+    },
+         
     "bluetooth": {
       "format": "󰂯",
       "format-connected": "󰂱 {device_alias}",
@@ -78,6 +112,9 @@
       },
       "format": "{icon} {capacity}%",
       "format-charging": "󰂄 {capacity}%",
+      "format-plugged": "󰂄{capacity}%",
+      "format-alt": "{icon} {time}",
+      "format-full": "󱈑 {capacity}%",
       "format-icons": [
         "󱊡",
         "󱊢",
@@ -86,13 +123,11 @@
     },
     
     "custom/power": {
-    "format": "⏻",
-    "tooltip": false,
-    "on-click": "~/.config/waybar/scripts/power.sh"
+      "format": "⏻",
+      "tooltip": false,
+      "on-click": "~/.config/waybar/scripts/power.sh"
     }, 
 
-    "tray": {
-      "spacing": 10,
-      "tooltip": false
-    }
+    
+    
    }

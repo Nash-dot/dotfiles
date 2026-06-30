@@ -1,44 +1,163 @@
-window#waybar.statusbar {
+/*
+
+Describes the Behaviour and Appearance of the Entire bar.
+
+The border settings are still in place if i ever decide to make my bar visible.
+
+*/
+window#waybar {
   font-family: "Maple Mono NF";
   font-size: 13px;
-  background-color: rgba(20, 18, 22, 0.7);
+  background-color: transparent;
   border-radius: 14px;
   padding: 8px;
   border-style: none;
 }
 
-#battery,
-#network,
-#bluetooth,
-#clock,
-#tray,
+
+/*
+
+Defines the structure and behaviour of modules present inside the bar.
+
+*/
+#custom-applauncher,
 #workspaces,
+#clock,
 #pulseaudio,
-#custom-power {
-  background-color: #2b2524;
-  margin: 6px 3px;
-  padding: 4px 8px;
-  border-radius: 8px;
+#battery,
+#custom-power,
+#tray {
+  background-color: #2a2024;
+  margin: 6px 4px;
+  padding: 4px 10px;
+  border-radius: 10px;
   color: #d9c8b5;
   border: 1px solid #5d4944;
+  font-weight: 500;
   transition-duration: 120ms;
 }
 
-#battery:hover,
-#network:hover,
-#bluetooth:hover,
-#clock:hover,
-#pulseaudio:hover,
-#tray:hover,
-#custom-power:hover {
-  background-color: #342d2c;
-  color: #D89BA5;
+
+/*
+
+Defined (Bluetooth, Network) (mpris components) seperately in order to remove the border settings to merge in single tray.
+
+*/
+#custom-mpris {
+  background-color: #2a2024;
+  margin: 6px 0 6px 4px;
+  padding: 4px 10px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #5d4944;
+  border-right: none;
+  color: #B68FE8;
+  text-shadow: 0 0 6px rgba(182, 143, 232, 0.5);
+}
+
+#custom-mpris-prev,
+#custom-mpris-playpause,
+#custom-mpris-next {
+  background-color: #2a2024;
+  margin: 6px 0px;
+  padding: 4px 8px;
+  border-radius: 0;
+  border: 1px solid #5d4944;
+  border-left: none;
+  border-right: none;
+  color: #C9A8F0;
+  text-shadow: 0 0 6px rgba(201, 168, 240, 0.5);
+}
+
+#custom-mpris-next {
+  border-radius: 0 10px 10px 0;
+}
+
+#bluetooth {
+  background-color: #2a2024;
+  margin: 6px 0 6px 4px;
+  padding: 5px 10px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #5d4944;
+  border-right: none;
+  color: #5EC8F2;
+  text-shadow: 0 0 6px rgba(94, 200, 242, 0.5);
+}
+
+#network {
+  background-color: #2a2024;
+  margin: 6px 4px 6px 0;
+  padding: 4px 10px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #5d4944;
+  border-left: none;
+  color: #9FE870;
+  text-shadow: 0 0 6px rgba(159, 232, 112, 0.5);
+}
+
+
+/*Individualiy give colors to each coponents*/
+#custom-applauncher {
+  color: #FF6FA5;
+  text-shadow: 0 0 6px rgba(255, 111, 165, 0.5);
+  transition-duration: 120ms;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #bda998;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #E8DCC8;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: #FFD24C;
+  text-shadow: 0 0 6px rgba(255, 210, 76, 0.5);
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: #FF6F61;
+  text-shadow: 0 0 6px rgba(255, 111, 97, 0.5);
 }
 
 #clock {
   margin-right: 6px;
 }
 
+#pulseaudio {
+  color: #FFB347;
+  text-shadow: 0 0 6px rgba(255, 179, 71, 0.5);
+}
+
+#battery {
+  color: #E8DCC8;
+}
+
+#battery.warning {
+  color: #d8a56b;
+}
+
+#battery.critical,
+#battery.urgent {
+  color: #FF4F4F;
+}
+
+#custom-power {
+  color: #FF4F4F;
+  text-shadow: 0 0 6px rgba(255, 79, 79, 0.45);
+}
+
+/*Describes the shell covering each module*/
 #tray menu {
   background-color: #141216;
   color: #d9c8b5;
@@ -61,40 +180,8 @@ window#waybar.statusbar {
   font-weight: bold;
 }
 
-#workspaces button {
-  transition-duration: 100ms;
-  all: initial;
-  min-width: 0;
-  font-weight: bold;
-  color: #bda998;
-  margin-right: 0.2cm;
-  margin-left: 0.2cm;
-}
 
-#workspaces button:hover {
-  transition-duration: 120ms;
-  color: #8A9A72;
-}
-
-#workspaces button.focused,
-#workspaces button.active {
-  color: #8A9A72;
-  font-weight: bold;
-}
-
-#workspaces button.urgent {
-  color: #d8a56b;
-}
-
-#battery.warning {
-  color: #d8a56b;
-}
-
-#battery.critical,
-#battery.urgent {
-  color: #b75a5a;
-}
-
+/*A info tray when the cursor hovers to a module*/
 tooltip {
   background-color: #2b2524;
   color: #d9c8b5;
@@ -103,6 +190,3 @@ tooltip {
 }
 
 
-#custom-power {
-  color: #b75a5a;
-}
