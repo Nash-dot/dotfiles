@@ -1,7 +1,7 @@
-# *title(not decided)*
+# *Soft medieval rice*
 <!-- imagepath -->
 ### First Rice. Learned everything along the way.
-I recently switched to Linux and decided the best way to learn was to throw myself into ricing. I referred [diinki's](https://youtu.be/jFz5gLqv-FM?si=roDH6UC9dYuVbEZI) tutorial which turned into days of figuring things out piece by piece. This is the result.
+Recently switched to Linux and decided the best way to learn was to make my rice. Referred [diinki's](https://youtu.be/jFz5gLqv-FM?si=roDH6UC9dYuVbEZI) tutorial which turned into days of figuring things out piece by piece. This is the result.
 
 Built on Pop!_OS, which meant adapting most resources (written for Arch-based systems) to work on a Debian base. If you're on a Debian-based system, this might save you some time.
 
@@ -27,14 +27,7 @@ Built on Pop!_OS, which meant adapting most resources (written for Arch-based sy
    nemo pavucontrol brightnessctl \
    grim slurp pulseaudio-utils
 ```
-   
-### Allow brightnessctl without sudo
-    
-```bash
-   sudo usermod -aG video $USER
-``` 
-   Log out and back in for this to take effect.
-    
+  
 ### Clone this repo
     
 ```bash
@@ -48,14 +41,7 @@ Built on Pop!_OS, which meant adapting most resources (written for Arch-based sy
    cp -r config/* ~/.config/
    cp -r scripts/* ~/.local/bin/
 ```
- 
-### Set up auto-tiling
- 
-```bash
-   pip3 install autotiling --break-system-packages
-   
-```
-   
+  
 ### Install Orbit (network manager)
  
    Orbit is a native network manager. Install it from [LifeOfATitan/orbit](https://github.com/LifeOfATitan/orbit).
@@ -74,8 +60,7 @@ Built on Pop!_OS, which meant adapting most resources (written for Arch-based sy
    The `diinki-retro-dark` theme is included in this repo under `gtk_theme/`.
  
 ```bash
-   cp -r gtk_theme/diinki-retro-dark ~/.themes/
-gsettings set org.gnome.desktop.interface gtk-theme "diinki-retro-dark"
+   cp -r gtk_theme/diinki-retro-dark ~/.themes/gsettings set org.gnome.desktop.interface gtk-theme "diinki-retro-dark"
 ```
  
 ### Reload Sway / reboot
@@ -83,7 +68,10 @@ gsettings set org.gnome.desktop.interface gtk-theme "diinki-retro-dark"
 ```bash
    swaymsg reload
 ```
- 
+## Quick tips
+- I would suggest you to refer the key bindings from sway/config cause it's customized from standard norm. 
+- You might need to set up brightness and autotiling manually.
+- Last one, this rice is my first project so if there is anything that I can improve on, then let me know! cheers.
 
 ## Credits
  
