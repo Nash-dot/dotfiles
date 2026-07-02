@@ -28,7 +28,7 @@ Defines the structure and behaviour of modules present inside the bar.
 #custom-power,
 #tray {
   background-color: #2a2024;
-  margin: 6px 4px;
+  margin: 6px 5px;
   padding: 4px 10px;
   border-radius: 10px;
   color: #d9c8b5;

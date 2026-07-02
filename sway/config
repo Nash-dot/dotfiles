@@ -1,7 +1,3 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
@@ -18,7 +14,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $application_launcher pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
+set $application_launcher pgrep rofi >/dev/null 2>&1 && killall rofi || ~/.config/rofi/launcher/launcher.sh
 set $file_explorer GTK_THEME=diinki-retro-dark nemo
 
 set $browser brave-browser
@@ -44,7 +40,7 @@ exec_always autotiling
 #enable battery notification alerts from mako.(scripts in bin)
 exec ~/.local/bin/battery-monitor
 
-#exec_always swaymsg gaps outer all set 5
+exec_always swaymsg gaps outer all set 5
 exec_always swaymsg gaps inner all set 5
 
 default_border pixel 1px
@@ -135,14 +131,14 @@ input "1267:12423:ELAN1300:00_04F3:3087_Touchpad" {
     bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym F4 exec brightnessctl set 5%-
     bindsym F5 exec brightnessctl set 5%+
-    bindsym F10 exec echo "camera toggle - placeholder"
+   #bindsym F10 exec echo "camera toggle - placeholder"
 
     # Lock screen (F9)
     bindsym F9 exec swaylock
     
     # Screenshot keys
-    bindsym F11 exec grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png
-    bindsym F12 exec ~/.local/bin/toggle-recording.sh
+    bindsym F11 exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png
+    bindsym F11+shift exec ~/.local/bin/toggle-recording.sh
     
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

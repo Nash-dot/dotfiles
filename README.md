@@ -77,3 +77,4 @@ Built on Pop!_OS, which meant adapting most resources (written for Arch-based sy
  
 - [diinki](https://youtu.be/jFz5gLqv-FM?si=roDH6UC9dYuVbEZI) — original ricing tutorial and `diinki-retro-dark` GTK theme
 - [O
+
