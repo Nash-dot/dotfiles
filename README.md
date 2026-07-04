@@ -63,3 +63,4 @@ grim slurp pulseaudio-utils
 - [Orbit](https://github.com/LifeOfATitan/orbit) - Brilliant Network manager menu.
 - Coolest and my personal favorite Rice. Adopted the rofi Launcher and Powermenu from [this](https://github.com/LoneWolf4713/new-wave).
 - Wallpapers are picked up from [Wallhaven](https://wallhaven.cc/) or refer from [Wallpapers](https://github.com/Nash-dot/dotfiles/tree/main/wallpapers).
+

@@ -1,11 +1,11 @@
-accent_primary = "#C58F8F"
-accent_secondary = "#7A8F62"
+accent_primary = "#E8B4AB"
+accent_secondary = "#88A36A"
 
-background = "#141216"
-foreground = "#D9C8B5"
+background = "#120F14"
+foreground = "#F3E6D8"
 
-destructive = "#A95A52"
+destructive = "#C56D65"
 
-opacity = 0.95
+opacity = 0.88
 
-accent_primary_foreground = "#141216"
+accent_primary_foreground = "#120F14"

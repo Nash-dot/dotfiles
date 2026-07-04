@@ -1,29 +1,45 @@
 /* ===== Main Panel ===== */
 
 .orbit-panel {
-    background: rgba(20, 18, 22, 0.94);
-    border: 1px solid #5A4C48;
-    border-radius: 18px;
-    padding: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    background: rgba(31, 19, 40, 0.82);
+    border: 1px solid rgba(232, 180, 171, .18);
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.55);
 }
 
 /* ===== Cards ===== */
 
 .orbit-network-row,
 .orbit-device-row {
-    background: #252122;
-    border-radius: 12px;
-    border: 1px solid transparent;
+    background: rgba(58,49,55,.75);
+    border: 1px solid rgba(232,180,171,.08);
+    border-radius: 14px;
     margin: 6px;
-    padding: 10px;
+    padding: 12px;
     transition: 180ms;
 }
 
 .orbit-network-row:hover,
 .orbit-device-row:hover {
-    background: #2F2928;
-    border-color: #C58F8F;
+    background:#3B234B;
+    border-color: #E8B4AB;
+    box-shadow: 0 0 18px rgba(232,180,171,.12);
+}
+
+/* ===== Connected ===== */
+
+.orbit-network-row.connected,
+.orbit-device-row.connected,
+.orbit-saved-network-row.active {
+
+    background: linear-gradient(
+        90deg,
+        rgba(232,180,171,.14),
+        rgba(136,163,106,.20)
+    );
+
+    border: 1px solid #88A36A;
 }
 
 /* ===== Buttons ===== */
@@ -31,13 +47,13 @@
 button,
 .orbit-button {
 
-    background: #252122;
+    background:#352044;
 
-    color: #D9C8B5;
+    color: #F3E6D8;
 
-    border: 1px solid #5A4C48;
+    border: 1px solid rgba(232,180,171,.15);
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     transition: 150ms;
 }
@@ -45,199 +61,148 @@ button,
 button:hover,
 .orbit-button:hover {
 
-    background: #322B2A;
+    background:#4A2B5E;
 
-    color: #C58F8F;
+    color: #E8B4AB;
 }
 
 /* ===== Tabs ===== */
 
 .orbit-tab {
 
-    color: #A99686;
+    color: #D6C2B4;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     transition: 150ms;
 }
 
 .orbit-tab:hover {
 
-    color: #C58F8F;
+    color: #E8B4AB;
 }
 
-.orbit-tab:selected {
+.orbit-tab:selected,
+.orbit-tab.active {
 
-    background: rgba(197,143,143,.15);
+    background: rgba(232,180,171,.20);
 
-    color: #C58F8F;
+    color: #E8B4AB;
 }
 
 /* ===== Search ===== */
 
-entry {
+entry,
+.orbit-search-container {
 
-    background: #252122;
+    background:#2A1836;
 
-    color: #D9C8B5;
+    color: #F3E6D8;
 
-    border: 1px solid #5A4C48;
+    border: 1px solid rgba(232,180,171,.12);
 
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 entry:focus {
 
-    border-color: #C58F8F;
+    border-color: #E8B4AB;
 }
 
 /* ===== Labels ===== */
 
 label {
 
-    color: #D9C8B5;
+    color: #F3E6D8;
 }
-
-/* ===== Switches ===== */
-
-switch:checked {
-
-    background: #7A8F62;
-}
-
-switch slider {
-
-    background: #D9C8B5;
-}
-
-/* ===== Progress ===== */
-
-progress {
-
-    background: #252122;
-}
-
-progress progress {
-
-    background: #C58F8F;
-}
-
-/* ===== Scrollbars ===== */
-
-scrollbar slider {
-
-    background: #5A4C48;
-
-    border-radius: 99px;
-}
-
-scrollbar slider:hover {
-
-    background: #C58F8F;
-}
-
-
 
 /* ===== Header ===== */
 
 .orbit-header {
-    background: #1C1A1D;
-    border-bottom: 1px solid #5A4C48;
-}
 
-/* ===== Tab Bar ===== */
+    background: rgba(24,20,25,.90);
 
-.orbit-tab-bar {
-    background: #1F1C1F;
-    border-radius: 999px;
-    padding: 4px;
-}
-
-.orbit-tab.active {
-    background: #B8847A;
-    color: #141216;
-}
-
-/* ===== Connected Cards ===== */
-
-.orbit-network-row.connected,
-.orbit-device-row.connected,
-.orbit-saved-network-row.active {
-
-    background: rgba(112,128,95,0.18);
-
-    border: 1px solid #70805F;
-}
-
-/* ===== Search Container ===== */
-
-.orbit-search-container {
-
-    background: #1F1C1F;
-
-    border: 1px solid #5A4C48;
-}
-
-.orbit-search-entry {
-
-    color: #D8CAB8;
+    border-bottom: 1px solid rgba(232,180,171,.12);
 }
 
 /* ===== Footer ===== */
 
 .orbit-footer {
 
-    background: #1C1A1D;
+    background: rgba(24,20,25,.90);
 
-    border-top: 1px solid #5A4C48;
+    border-top: 1px solid rgba(232,180,171,.12);
 }
 
-/* ===== Status Text ===== */
+/* ===== Status ===== */
 
 .orbit-status {
 
-    color: #B7A998;
+    color: #D9C9BB;
 
-    opacity: .8;
+    opacity: .9;
 }
 
 /* ===== Toggle ===== */
 
+switch:checked {
+    background: #7A8F62;
+}
+
 .orbit-toggle-switch:checked {
-
     background: #70805F !important;
-
     border-color: #70805F !important;
+}
+
+/* ===== Progress ===== */
+
+progress {
+
+    background: rgba(58,49,55,.80);
+}
+
+progress progress {
+
+    background: #E8B4AB;
+}
+
+/* ===== Scrollbar ===== */
+
+scrollbar slider {
+
+    background: rgba(232,180,171,.20);
+
+    border-radius: 99px;
+}
+
+scrollbar slider:hover {
+
+    background: #E8B4AB;
 }
 
 /* ===== Section Header ===== */
 
 .orbit-section-header {
 
-    color: #B8847A;
+    color: #E8B4AB;
+
+    font-weight: bold;
 }
 
-
-window switch.orbit-toggle-switch slider {
-
-    background: #141216 !important;
-}
-
-/* ===== Orbit Logo ===== */
+/* ===== Icons ===== */
 
 .orbit-icon-accent,
-.orbit-logo-container,
 image {
 
-    color: #B8847A !important;
+    color: #C58F8F !important;
 
     -gtk-icon-palette:
-        success #B8847A,
-        warning #B8847A,
-        error #B8847A;
+        success #C58F8F,
+        warning #C58F8F,
+        error #C58F8F;
 }
 
-/* Hide Orbit logo */
+/* ===== Hide Logo ===== */
 
 .orbit-logo-container {
 
@@ -251,5 +216,3 @@ image {
 
     padding: 0;
 }
-
-
